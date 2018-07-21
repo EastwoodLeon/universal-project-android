@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ClearableEditText">
+        <attr name="cet_inputType" format="integer" />
+        <attr name="cet_textColor" format="color" />
+        <attr name="cet_textSize" format="dimension" />
+        <attr name="cet_editTextPadding" format="dimension" />
+        <attr name="cet_buttonWidth" format="dimension" />
+        <attr name="cet_buttonPadding" format="dimension" />
+        <attr name="cet_buttonSrc" format="reference" />
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@android:color/darker_gray">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <com.pxkeji.ui.view.ClearableEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cet_editTextPadding="10dp"
+            app:cet_buttonWidth="48dp"
+            app:cet_buttonPadding="8dp"
+            app:cet_inputType="1"
+            app:cet_textColor="@android:color/black"
+            app:cet_textSize="19sp"
+            app:cet_buttonSrc="@drawable/icon_delete_light"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <com.pxkeji.ui.view.ClearableEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cet_editTextPadding="10dp"
+            app:cet_buttonWidth="48dp"
+            app:cet_buttonPadding="8dp"
+            app:cet_inputType="2"
+            app:cet_textColor="@android:color/black"
+            app:cet_textSize="14sp"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"/>
+</LinearLayout>
