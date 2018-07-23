@@ -11,10 +11,36 @@
 
 
     <com.pxkeji.ui.view.ShopCartPlusMinus
+        android:id="@+id/shopCartPlusMinus"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="20dp"/>
 
+    <com.pxkeji.ui.view.ShopCartPlusMinus
+        android:id="@+id/shopCartPlusMinus2"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        app:scpm_buttonWidth="48dp"/>
 
+
+    <Button
+        android:id="@+id/btnGetCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get count"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="please enter number"/>
+
+    <Button
+        android:id="@+id/btnSetCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set count"/>
 
 </LinearLayout>
