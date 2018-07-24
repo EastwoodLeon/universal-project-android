@@ -44,15 +44,18 @@ class ImageSelector : RecyclerView {
                 // 最后一张，再添一张
                 if (mList.indexOf(bean) + 1 == mList.size) {
                     addOne()
-                    Log.w("mList", "${mList.size}")
-                    Log.w("mAdapter.list", "${mAdapter.list.size}")
-                    //mAdapter.notifyItemInserted(mList.size - 1)
                     mAdapter.notifyDataSetChanged()
                 }
             }
 
-            override fun onDeleteClick() {
+            override fun onDeleteClick(bean: ImageBean) {
 
+                if (mList.size > 1) {
+                    val index = mList.indexOf(bean)
+                    mList.remove(bean)
+                    mAdapter.notifyItemRemoved(index)
+
+                }
             }
 
         }

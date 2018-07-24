@@ -33,17 +33,22 @@ class ImageSelectorAdapter(
             mOnClickListener?.onImageClick(bean)
         }
 
+        holder.delete.setOnClickListener {
+            mOnClickListener?.onDeleteClick(bean)
+        }
+
     }
 
     companion object {
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
             val image: ImageView = itemView.findViewById(R.id.image)
+            val delete: ImageView = itemView.findViewById(R.id.delete)
         }
     }
 
     interface OnClickListener {
         fun onImageClick(bean: ImageBean)
-        fun onDeleteClick()
+        fun onDeleteClick(bean: ImageBean)
     }
 }
