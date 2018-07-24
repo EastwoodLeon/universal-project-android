@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="dark_gray">#ff00ff</color>
+
+    <color name="shop_cart_plus_minus_border">#f0f0f0</color>
+    <color name="shop_cart_plus_minus_inactive">#f0f0f0</color>
+    <color name="shop_cart_plus_minus_active">#3c3c3c</color>
+</resources>

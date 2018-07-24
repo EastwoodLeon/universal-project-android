@@ -11,5 +11,7 @@
         <attr name="cet_buttonSrc" format="reference" />
     </declare-styleable>
 
-
+    <declare-styleable name="ShopCartPlusMinus">
+        <attr name="scpm_buttonWidth" format="dimension" />
+    </declare-styleable>
 </resources>

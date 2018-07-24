@@ -14,6 +14,19 @@ import android.widget.LinearLayout
 import com.pxkeji.ui.R
 import com.pxkeji.ui.util.px2sp
 
+/*
+<com.pxkeji.ui.view.ClearableEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cet_editTextPadding="10dp"
+            app:cet_buttonWidth="48dp"
+            app:cet_buttonPadding="8dp"
+            app:cet_inputType="1"
+            app:cet_textColor="@android:color/black"
+            app:cet_textSize="19sp"
+            app:cet_buttonSrc="@drawable/icon_delete_light"/>
+ */
+
 class ClearableEditText  : LinearLayout {
 
     companion object {
@@ -86,7 +99,7 @@ class ClearableEditText  : LinearLayout {
     }
 
     private fun inflateView() {
-        val li = getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val li = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
         li.inflate(R.layout.clearable_edit_text, this, true)
 
