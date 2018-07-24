@@ -13,22 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnGetCount.setOnClickListener {
-            val count = shopCartPlusMinus.currentCount
-            Toast.makeText(this, "count: $count", Toast.LENGTH_SHORT).show()
-        }
 
-        btnSetCount.setOnClickListener {
-            var count = 0
-            try {
-
-                count = editText2.text.toString().trim().toInt()
-            } catch (e: NumberFormatException) {
-                e.printStackTrace()
-            }
-
-
-            shopCartPlusMinus.currentCount = count
-        }
     }
 }
