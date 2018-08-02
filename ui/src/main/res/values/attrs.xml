@@ -2,7 +2,12 @@
 <resources>
 
     <declare-styleable name="ClearableEditText">
-        <attr name="cet_inputType" format="integer" />
+        <attr name="cet_inputType" format="enum">
+            <!-- 输入类型为普通文本 -->
+            <enum name="text" value="1" />
+            <!-- 密码 -->
+            <enum name="password" value="2" />
+        </attr>
         <attr name="cet_textColor" format="color" />
         <attr name="cet_textSize" format="dimension" />
         <attr name="cet_editTextPadding" format="dimension" />

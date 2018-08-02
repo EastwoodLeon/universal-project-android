@@ -29,13 +29,6 @@ import com.pxkeji.ui.util.px2sp
 
 class ClearableEditText  : LinearLayout {
 
-    companion object {
-        //输入类型为普通文本
-        const val INPUT_TYPE_TEXT = 1
-
-        // 密码
-        const val INPUT_TYPE_PASSWORD = 2
-    }
 
     private lateinit var editText: EditText
 
@@ -53,7 +46,7 @@ class ClearableEditText  : LinearLayout {
 
         val ta = context.obtainStyledAttributes(attrs, R.styleable.ClearableEditText)
 
-        val inputType = ta.getInt(R.styleable.ClearableEditText_cet_inputType, INPUT_TYPE_TEXT)
+        val inputType = ta.getInteger(R.styleable.ClearableEditText_cet_inputType, 1)
         val textColor = ta.getColor(R.styleable.ClearableEditText_cet_textColor, 0)
         val textSizePx = ta.getDimension(R.styleable.ClearableEditText_cet_textSize, 20f)
         val editTextPadding = ta.getDimension(R.styleable.ClearableEditText_cet_editTextPadding, 0f)
@@ -67,7 +60,7 @@ class ClearableEditText  : LinearLayout {
 
 
         editText.inputType = when(inputType) {
-            INPUT_TYPE_PASSWORD -> {
+            2 -> {
 
                 InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
 
