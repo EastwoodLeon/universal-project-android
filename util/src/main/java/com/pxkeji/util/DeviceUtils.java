@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.provider.Settings;
 
+import java.io.File;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -46,5 +47,19 @@ public class DeviceUtils {
         }
         //返回整个结果
         return sb.toString();
+    }
+
+    /**
+     * 判断手机是否拥有Root权限。
+     * @return 有root权限返回true，否则返回false。
+     */
+    public boolean isRoot() {
+        boolean bool = false;
+        try {
+            bool = new File("/system/bin/su").exists() || new File("/system/xbin/su").exists();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return bool;
     }
 }
