@@ -6,29 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-abstract class CommonAdapter<T>(
-        val list: ArrayList<T>
-) : RecyclerView.Adapter<CommonAdapter.Companion.ViewHolder>() {
+abstract class  CommonAdapter <T> (val list: List<T>)
+    : RecyclerView.Adapter<CommonAdapter.Companion.ViewHolder>() {
 
-    private var context: Context? = null
+    abstract val layoutId: Int
+    var context: Context? = null
 
-    abstract var layoutId: Int
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        if (context == null) {
+            context = parent.context
+        }
+
+        return ViewHolder(LayoutInflater.from(context)
+                .inflate(layoutId, parent, false))
+    }
+
+    override fun getItemCount(): Int = list.size
+
+
 
     companion object {
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        if (context == null) context = parent.context
-
-        val view = LayoutInflater.from(context).inflate(layoutId, parent, false)
-
-        val holder = ViewHolder(view)
-
-        return holder
-    }
-
-    override fun getItemCount() = list.size
-
-
 }
