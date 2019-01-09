@@ -19,4 +19,25 @@
     <declare-styleable name="ShopCartPlusMinus">
         <attr name="scpm_buttonWidth" format="dimension" />
     </declare-styleable>
+
+    <!-- AutoPhotoLayout -->
+    <declare-styleable name="camera_flow_layout">
+        <attr name="max_count" format="integer" />
+        <attr name="item_margin" format="integer" />
+        <!-- 一行有多少个 -->
+        <attr name="line_count" format="integer" />
+
+    </declare-styleable>
+
+    <!-- ImageSelector -->
+    <declare-styleable name="ImageSelector">
+        <!-- 添加图片的图标 -->
+        <attr name="is_add_icon" format="reference" />
+        <!-- 动态计算高度时，需要剪掉的部分 -->
+        <attr name="is_image_margin" format="integer" />
+        <!-- 列数 -->
+        <attr name="is_column_count" format="integer" />
+        <!-- 最大张数 -->
+        <attr name="is_max_count" format="integer" />
+    </declare-styleable>
 </resources>
