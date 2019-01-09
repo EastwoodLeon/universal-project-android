@@ -16,7 +16,8 @@ class ImageSelectorAdapter(
         private val list: ArrayList<ImageBean>,
         private val screenWidth: Int,
         private val addIcon: Drawable?,
-        private val imageMargin: Int
+        private val imageMargin: Int,
+        private val columnCount: Int
 ) : RecyclerView.Adapter<ImageSelectorAdapter.Companion.ViewHolder>() {
 
     private var mContext: Context? = null
@@ -37,7 +38,7 @@ class ImageSelectorAdapter(
         val bean = list[position]
 
         val lp = holder.image.layoutParams
-        lp.height = screenWidth / 3 - imageMargin
+        lp.height = screenWidth / columnCount - imageMargin
         holder.image.layoutParams = lp
 
 

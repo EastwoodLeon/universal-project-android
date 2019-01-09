@@ -86,7 +86,7 @@ class ImageSelector : RecyclerView {
 
 
 
-        mAdapter = ImageSelectorAdapter(mList, context.resources.displayMetrics.widthPixels, addIcon, imageMargin)
+        mAdapter = ImageSelectorAdapter(mList, context.resources.displayMetrics.widthPixels, addIcon, imageMargin, columnCount)
 
         mAdapter.mOnClickListener = object : ImageSelectorAdapter.OnClickListener {
             override fun onImageClick(bean: ImageBean) {
