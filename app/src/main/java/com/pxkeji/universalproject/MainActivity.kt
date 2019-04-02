@@ -1,10 +1,8 @@
 package com.pxkeji.universalproject
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import com.pxkeji.ui.showToast
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +11,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btn1.setOnClickListener {
+            val intent = Intent(this, PlaygroundActivity::class.java)
+            startActivity(intent)
+        }
 
+    }
+
+    companion object {
+        const val TAG = "MainActivity"
     }
 }

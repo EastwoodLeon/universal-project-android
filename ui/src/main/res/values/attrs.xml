@@ -40,4 +40,10 @@
         <!-- 最大张数 -->
         <attr name="is_max_count" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="ValidateSeekbar">
+        <attr name="vs_text" format="string" />
+        <attr name="vs_text_color" format="color" />
+        <attr name="vs_text_size" format="dimension" />
+    </declare-styleable>
 </resources>

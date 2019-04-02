@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
-
-    <com.pxkeji.ui.view.ClearableEditText
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:cet_editTextPadding="10dp"
-        app:cet_buttonWidth="48dp"
-        app:cet_buttonPadding="8dp"
-        app:cet_inputType="text"
-        app:cet_textColor="@android:color/black"
-        app:cet_textSize="19sp"
-        app:cet_buttonSrc="@drawable/icon_delete_light"/>
+        android:layout_height="wrap_content">
+
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            >
+
+            <include layout="@layout/common_toolbar_title" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click"/>
 
 </LinearLayout>

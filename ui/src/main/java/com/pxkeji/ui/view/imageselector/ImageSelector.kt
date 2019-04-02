@@ -1,13 +1,11 @@
 package com.pxkeji.ui.view.imageselector
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.AsyncTask
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
-import android.util.Log
-import android.widget.ImageView
-import android.view.ViewGroup
 import com.pxkeji.ui.R
 import com.pxkeji.ui.view.imageselector.ImageBean.Companion.ImageType
 
@@ -30,6 +28,7 @@ class ImageSelector : RecyclerView {
         get() = mList.map { it.path }
         set(value) {
 
+            val task = @SuppressLint("StaticFieldLeak")
             object : AsyncTask<List<String>, Unit, Unit>() {
                 override fun doInBackground(vararg p0: List<String>?) {
                     p0[0]?.let {
@@ -37,7 +36,7 @@ class ImageSelector : RecyclerView {
                         mList += it.map {
                             ImageBean().apply {
                                 imageType = ImageType.REMOTE
-                                path = it
+                                remotePath = it
                             }
                         }
 
@@ -50,9 +49,9 @@ class ImageSelector : RecyclerView {
                 override fun onPostExecute(result: Unit?) {
                     mAdapter.notifyDataSetChanged()
                 }
-            }.execute(value)
+            }
 
-
+            task.execute(value)
 
 
         }

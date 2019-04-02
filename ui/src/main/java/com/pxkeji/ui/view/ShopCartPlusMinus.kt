@@ -25,7 +25,7 @@ class ShopCartPlusMinus : LinearLayout {
     var currentCount: Int = 0
         get() {
             val count = getCountFromEditText()
-            return legalizeCount(count)
+            return count
         }
         set(value) {
 
@@ -125,7 +125,7 @@ class ShopCartPlusMinus : LinearLayout {
     }
 
     private fun getCountFromEditText() : Int {
-        var count = 1
+        var count = 0
 
         try {
             count = editText.text.toString().trim().toInt()

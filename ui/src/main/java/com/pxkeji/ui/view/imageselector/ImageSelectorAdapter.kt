@@ -3,14 +3,13 @@ package com.pxkeji.ui.view.imageselector
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.pxkeji.ui.R
-import com.pxkeji.util.LogUtil
+import com.pxkeji.ui.view.imageselector.ImageBean.Companion.ImageType
 
 class ImageSelectorAdapter(
         private val list: ArrayList<ImageBean>,
@@ -45,6 +44,14 @@ class ImageSelectorAdapter(
 
         if (mContext != null) {
 
+            when {
+                bean.imageType == ImageType.LOCAL && bean.path != "" -> Glide.with(mContext!!).load(bean.path).into(holder.image)
+                bean.imageType == ImageType.REMOTE && bean.remotePath != "" -> Glide.with(mContext!!).load(bean.remotePath).into(holder.image)
+                addIcon != null -> holder.image.setImageDrawable(addIcon)
+                else -> holder.image.setImageResource(R.drawable.add_image)
+            }
+
+            /*
             if (bean.path != "") {
                 Glide.with(mContext!!).load(bean.path).into(holder.image)
             } else if (addIcon != null) {
@@ -52,6 +59,7 @@ class ImageSelectorAdapter(
             } else {
                 holder.image.setImageResource(R.drawable.add_image)
             }
+            */
 
         }
 

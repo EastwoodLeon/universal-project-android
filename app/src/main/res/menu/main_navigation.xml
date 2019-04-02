@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/feed"
+        android:icon="@drawable/nav_feed"
+        android:title=""/>
+
+    <item
+        android:id="@+id/discover"
+        android:icon="@drawable/nav_discover"
+        android:title=""/>
+
+    <item
+        android:id="@+id/store"
+        android:icon="@drawable/nav_store"
+        android:title=""/>
+
+    <item
+        android:id="@+id/today"
+        android:icon="@drawable/nav_today"
+        android:title=""/>
+
+    <item
+        android:id="@+id/my"
+        android:icon="@drawable/nav_my"
+        android:title=""/>
+</menu>

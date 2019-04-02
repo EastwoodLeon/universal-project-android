@@ -1,7 +1,5 @@
 package com.pxkeji.ui.view.imageselector
 
-import java.io.File
-
 class ImageBean {
 
     companion object {
@@ -11,5 +9,14 @@ class ImageBean {
     }
 
     var imageType = ImageType.LOCAL
+
+    /**
+     * 本地路径
+     */
     var path: String = ""
+
+    /**
+     * 网上路径
+     */
+    var remotePath: String = ""
 }
