@@ -85,4 +85,8 @@ class ValidateSeekbar @JvmOverloads constructor(
             seekBar.progress = 0
         }
     }
+
+    fun reset() {
+        seekBar.progress = 0
+    }
 }

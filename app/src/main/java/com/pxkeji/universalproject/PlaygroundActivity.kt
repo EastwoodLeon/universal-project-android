@@ -14,5 +14,9 @@ class PlaygroundActivity : AppCompatActivity() {
         vs_1.onDone = {
             Toast.makeText(this, "yes", Toast.LENGTH_SHORT).show()
         }
+
+        btn_reset.setOnClickListener {
+            vs_1.reset()
+        }
     }
 }

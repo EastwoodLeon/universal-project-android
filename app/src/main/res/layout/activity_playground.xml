@@ -16,5 +16,11 @@
         app:vs_progress_drawable="@drawable/vs_progress_drawable_test"
         app:vs_thumb="@drawable/vs_thumb"/>
 
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="reset"/>
+
 
 </LinearLayout>
