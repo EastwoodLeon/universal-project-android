@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <SeekBar
-        android:id="@+id/sb"
+        android:id="@+id/vs_sb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:max="100"
@@ -16,19 +16,20 @@
         android:splitTrack="false"
         android:thumb="@drawable/vs_thumb"
         android:thumbOffset="-2dp"
+
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/vs_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="到达指定地点"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@id/sb"
-        app:layout_constraintLeft_toLeftOf="@id/sb"
-        app:layout_constraintRight_toRightOf="@id/sb"
-        app:layout_constraintTop_toTopOf="@id/sb" />
+        app:layout_constraintBottom_toBottomOf="@id/vs_sb"
+        app:layout_constraintLeft_toLeftOf="@id/vs_sb"
+        app:layout_constraintRight_toRightOf="@id/vs_sb"
+        app:layout_constraintTop_toTopOf="@id/vs_sb" />
 </merge>

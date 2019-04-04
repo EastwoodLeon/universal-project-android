@@ -21,6 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlaygroundActivity" />
+
+        <activity android:name=".VsTestActivity">
+
+        </activity>
     </application>
 
 </manifest>

@@ -6,16 +6,15 @@
     android:orientation="vertical">
 
     <com.pxkeji.ui.view.ValidateSeekbar
+        android:id="@+id/vs_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_light"
+        android:layout_margin="8dp"
         app:vs_text="123"
         app:vs_text_color="@android:color/holo_orange_light"
-        app:vs_text_size="16sp"/>
+        app:vs_text_size="16sp"
+        app:vs_progress_drawable="@drawable/vs_progress_drawable_test"
+        app:vs_thumb="@drawable/vs_thumb"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="123"
-        android:textSize="16sp"/>
+
 </LinearLayout>

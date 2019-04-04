@@ -16,6 +16,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btn2.setOnClickListener {
+            val intent = Intent(this, VsTestActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     companion object {
