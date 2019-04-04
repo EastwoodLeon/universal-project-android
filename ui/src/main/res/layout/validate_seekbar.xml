@@ -16,7 +16,6 @@
         android:splitTrack="false"
         android:thumb="@drawable/vs_thumb"
         android:thumbOffset="-2dp"
-
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"

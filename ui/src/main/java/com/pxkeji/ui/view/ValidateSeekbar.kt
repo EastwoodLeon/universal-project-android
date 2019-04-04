@@ -8,6 +8,19 @@ import android.widget.SeekBar
 import android.widget.TextView
 import com.pxkeji.ui.R
 
+/**
+ * <com.pxkeji.ui.view.ValidateSeekbar
+        android:id="@+id/vs_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:vs_text="123"
+        app:vs_text_color="@android:color/holo_orange_light"
+        app:vs_text_size="16sp"
+        app:vs_progress_drawable="@drawable/vs_progress_drawable_test"
+        app:vs_thumb="@drawable/vs_thumb"/>
+ */
+
 class ValidateSeekbar @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
